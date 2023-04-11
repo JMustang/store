@@ -44,3 +44,15 @@ STATIC_ROOT = os.path.join('static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 ```
+
+- Criando um app aparte para gerenciar clientes.
+
+```bash
+python3 manage.py startapp clientes
+```
+
+- Rodando o servidor.
+
+```bash
+python3 manage.py runserver
+```

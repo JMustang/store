@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "django",
+        "runserver",
+        "startapp",
         "startproject",
         "STATICFILES",
         "venv"
