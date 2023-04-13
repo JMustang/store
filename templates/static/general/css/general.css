@@ -1,7 +1,22 @@
 :root {
+  --main-color: #ff3d7f;
+  --dark-color: #7c2855;
+  --light-color: #ffed84;
+  --contrast-color: #db5400;
+  --differential-color: #ffc269;
+}
+/* :root {
+  --main-color: #ff3d7f;
+  --dark-color: #7c2855;
+  --light-color: #ffed84;
+  --contrast-color: #f9a11e;
+  --differential-color: #ffc269;
+} */
+
+/* :root {
   --main-color: #ac4147;
   --dark-color: #411f2d;
   --light-color: #ffc27f;
   --contrast-color: #f88863;
   --differential-color: #ffe29a;
-}
+} */
