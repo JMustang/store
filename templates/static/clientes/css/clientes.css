@@ -13,12 +13,19 @@
 }
 
 .btn-add-carros {
-  background-color: var(--contrast-color);
+  /* background-color: var(--contrast-color); */
   padding: 5px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  background-color: #d207ff;
+  transition: background-color 0.3s ease-in-out;
+  margin: 5px;
+}
+
+.form-carro > .row {
+  padding-top: 9px;
+  margin-bottom: 5px;
 }
 
 .btn-principal {
@@ -33,6 +40,10 @@
 
 .btn-add-carros:hover,
 .btn-principal:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add-carros:hover {
+  background-color: #dc75f3;
 }
