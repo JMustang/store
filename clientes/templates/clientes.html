@@ -15,7 +15,8 @@
         </div>
     </div>
         <div class="adicionar-cliente">
-            <form action="{% url "row">
+            <form action="{% url 'clientes' %}" method="POST">{% csrf_token %}
+                 <div class="row">
                     <div class="col-md">
                         <p>Nome:</p>
                         <input type="text" class="form-control" placeholder="Primeiro nome" name="nome">
@@ -33,6 +34,7 @@
                 <input type="text" class="form-control" placeholder="___.___.___-__" name="cpf">
                 <hr style="background-color:gray;">
                 <div class="add-carros">
+
                     <h3>Carros</h3>
                     <span class="btn-add-carros" onclick="add_carro()">+ Adicionar</span>
                     <div id="form-carro">

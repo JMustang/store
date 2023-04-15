@@ -56,3 +56,17 @@ python3 manage.py startapp clientes
 ```bash
 python3 manage.py runserver
 ```
+
+- Rodando as migrations
+
+- Esse comando cria as migrasions 
+
+```bash
+python3 manage.py makemigrations
+```
+
+- Esse comando roda as migrations
+
+```bash
+python3 manage.py migrate
+```
