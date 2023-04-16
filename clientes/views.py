@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Cliente, Carro
+import re
 
 
 def clientes(request):
@@ -19,6 +20,10 @@ def clientes(request):
 
         if cliente.exists():
             return HttpResponse('Cliente já cadastrado')
+
+        if not re.fullmatch(re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+'), email):
+            # TODO: Adicionar mensagens
+            return HttpResponse('Email inválido')
 
         cliente = Cliente(
             nome=nome,

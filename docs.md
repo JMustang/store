@@ -59,7 +59,7 @@ python3 manage.py runserver
 
 - Rodando as migrations
 
-- Esse comando cria as migrasions 
+- Esse comando cria as migrasions
 
 ```bash
 python3 manage.py makemigrations
