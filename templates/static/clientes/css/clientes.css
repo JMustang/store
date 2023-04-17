@@ -6,6 +6,7 @@
   text-align: center;
   padding: 20px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .text-card {
@@ -46,4 +47,8 @@
 
 .btn-add-carros:hover {
   background-color: #dc75f3;
+}
+
+#att_cliente {
+  display: none;
 }

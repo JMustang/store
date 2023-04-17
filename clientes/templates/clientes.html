@@ -3,13 +3,16 @@
 {% endblock %} {% block 'dashboard' %}
 <div class="container">
   <div class="row">
-    <div class="col-md card-dashboard">
+    <div onclick="exibir_form('1')" class="col-md card-dashboard">
+      <i class="bi bi-person-fill-add"></i>
       <p class="text-card">Adicionar clientes</p>
     </div>
-    <div class="col-md card-dashboard">
+    <div onclick="exibir_form('2')" class="col-md card-dashboard">
+      <i class="bi bi-person-fill-gear"></i>
       <p class="text-card">Atualizar clientes</p>
     </div>
   </div>
+  <br />
   <div id="adicionar-cliente" class="adicionar-cliente">
     <form action="{% url 'clientes' %}" method="POST">
       {% csrf_token %}
@@ -44,7 +47,7 @@
         name="email"
         value="{{email}}"
       />
-      <br>
+      <br />
       <p>CPF:</p>
       <input
         type="text"
@@ -56,14 +59,12 @@
       <hr style="background-color: gray" />
       <div class="add-carros">
         <h3>Carros</h3>
-        <span class="btn-add-carros" onclick="add_carro()"
-          >+ Adicionar um carro</span
-        >
+        <span class="btn-add-carros" onclick="add_carro()">+ Adicionar </span>
         <div id="form-carro">
           {% for carro, placa, ano in carros%}
-          <br>
           <div class="row">
             <div class="col-md">
+              <br />
               <input
                 type="text"
                 placeholder="carro"
@@ -101,6 +102,8 @@
       <input type="submit" value="Cadastrar" class="btn-principal" />
     </form>
   </div>
+
+  <div id="att_cliente">teste</div>
 </div>
 <script src="{% static 'clientes/js/clientes.js' %}"></script>
 {% endblock %}
