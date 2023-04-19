@@ -28,3 +28,22 @@ const exibir_form = (tipo) => {
     add_cliente.style.display = "none";
   }
 };
+
+const dados_cliente = () => {
+  cliente = document.getElementById("cliente-select");
+  csrf_token = document.querySelector("[name=csrfmiddlewaretoken]");
+  id_cliente = cliente.value;
+
+  data = new FormData();
+  data.append("id_cliente", id_cliente);
+
+  fetch("/clientes/atualiza_cliente/", {
+    method: "POST",
+    headers: {
+      "X-CSRFToken": csrf_token,
+    },
+    body: data,
+  })
+    .then((response) => response.json())
+    .then((data) => {});
+};
