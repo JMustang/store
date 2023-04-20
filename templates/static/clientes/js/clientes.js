@@ -31,7 +31,7 @@ const exibir_form = (tipo) => {
 
 const dados_cliente = () => {
   cliente = document.getElementById("cliente-select");
-  csrf_token = document.querySelector("[name=csrfmiddlewaretoken]");
+  csrf_token = document.querySelector("[name=csrfmiddlewaretoken]").value;
   id_cliente = cliente.value;
 
   data = new FormData();
@@ -44,6 +44,10 @@ const dados_cliente = () => {
     },
     body: data,
   })
-    .then((response) => response.json())
-    .then((data) => {});
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    });
 };

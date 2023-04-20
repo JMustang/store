@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Cliente, Carro
 import re
 
@@ -52,3 +52,8 @@ def clientes(request):
             car.save()
 
         return HttpResponse('Cliente cadastrado com sucesso')
+
+
+def att_cliente(request):
+    print('msg')
+    return JsonResponse({'msg': 1})
